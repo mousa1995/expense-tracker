@@ -69,7 +69,7 @@ Prepare the repository and establish a clean React + TypeScript development envi
 - [x] Verify the application runs successfully
 - [x] Remove unnecessary starter files
 - [x] Rename project in `package.json` from `vite-project` to `expense-tracker`
-- [ ] Verify the project still starts after the rename
+- [x] Verify the project still starts after the rename
 
 ## Git Commit
 
@@ -81,7 +81,7 @@ git commit -m "chore: initialize React TypeScript app"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

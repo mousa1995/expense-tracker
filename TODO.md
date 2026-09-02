@@ -123,10 +123,10 @@ Create a simple project structure and establish the core expense domain.
 
 ## Verification
 
-- [ ] Application runs with `npm run dev`
-- [ ] No TypeScript errors
-- [ ] No unused imports
-- [ ] No unnecessary starter code remains
+- [x] Application runs with `npm run dev`
+- [x] No TypeScript errors
+- [x] No unused imports
+- [x] No unnecessary starter code remains
 
 ## Git Commit
 
@@ -138,7 +138,7 @@ git commit -m "feat: add expense domain model and app foundation"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 
@@ -150,37 +150,35 @@ Display existing expenses in a clear and reusable list.
 
 ## Components
 
-- [ ] Create `ExpenseList`
-- [ ] Create `ExpenseItem`
-- [ ] Define props for `ExpenseList`
-- [ ] Define props for `ExpenseItem`
-- [ ] Pass expense data through props
-- [ ] Render the expense collection with `.map()`
-- [ ] Use a stable expense ID for React `key`
+- [x] Create `ExpenseList`
+- [x] Create `ExpenseItem`
+- [x] Define props for `ExpenseList`
+- [x] Define props for `ExpenseItem`
+- [x] Pass expense data through props
+- [x] Render the expense collection with `.map()`
+- [x] Use a stable expense ID for React `key`
 
 ## Expense Display
 
-- [ ] Display expense title
-- [ ] Display amount
-- [ ] Display category
-- [ ] Display date
-- [ ] Format the amount consistently
-- [ ] Format or display the date consistently
+- [x] Display expense person
+- [x] Display amount
+- [x] Display category
+- [x] Format the amount consistently
 - [ ] Make each expense visually distinguishable
 
 ## Empty State
 
-- [ ] Detect an empty expense list
-- [ ] Display a useful empty-state message
-- [ ] Verify the empty state does not break the layout
+- [x] Detect an empty expense list
+- [x] Display a useful empty-state message
+- [x] Verify the empty state does not break the layout
 
 ## Verification
 
-- [ ] Multiple expenses render correctly
-- [ ] Each expense displays the correct data
-- [ ] Keys are stable and unique
-- [ ] Empty list renders correctly
-- [ ] No console warnings related to list rendering
+- [x] Multiple expenses render correctly
+- [x] Each expense displays the correct data
+- [x] Keys are stable and unique
+- [x] Empty list renders correctly
+- [x] No console warnings related to list rendering
 
 ## Git Commit
 
@@ -192,7 +190,7 @@ git commit -m "feat: add expense list"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

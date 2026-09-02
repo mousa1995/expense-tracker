@@ -1,4 +1,6 @@
 import "./App.css";
+import { ExpenseList } from "./components/ExpenseList";
+import { expenses } from "./data/expenses";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <main>
         <section>
           <h2>Expenses</h2>
+          <ExpenseList expenses={expenses} />
         </section>
         <section>
           <h2>Total</h2>

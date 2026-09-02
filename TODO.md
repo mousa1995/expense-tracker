@@ -93,33 +93,33 @@ Create a simple project structure and establish the core expense domain.
 
 ## Project Structure
 
-- [ ] Create `src/components/`
-- [ ] Create `src/types/`
-- [ ] Create `src/data/`
-- [ ] Create `src/utils/` only if a real need appears
-- [ ] Avoid unnecessary folders
+- [x] Create `src/components/`
+- [x] Create `src/types/`
+- [x] Create `src/data/`
+- [x] Create `src/utils/` only if a real need appears
+- [x] Avoid unnecessary folders
 - [ ] Keep component responsibilities clear
 
 ## Expense Domain
 
-- [ ] Define the `Expense` interface
-- [ ] Decide which fields an expense requires
-- [ ] Decide which fields are optional, if any
-- [ ] Define supported expense categories
-- [ ] Decide how category values are represented in TypeScript
-- [ ] Decide how expense IDs are represented
-- [ ] Decide how dates are represented
-- [ ] Create initial sample expenses
-- [ ] Verify sample data matches the `Expense` type
+- [x] Define the `Expense` interface
+- [x] Decide which fields an expense requires
+- [x] Decide which fields are optional, if any
+- [x] Define supported expense categories
+- [x] Decide how category values are represented in TypeScript
+- [x] Decide how expense IDs are represented
+- [x] Decide how dates are represented
+- [x] Create initial sample expenses
+- [x] Verify sample data matches the `Expense` type
 
 ## Initial Application Shell
 
-- [ ] Create the main application layout
-- [ ] Add the application title
-- [ ] Add the expense section
-- [ ] Add a total section placeholder
-- [ ] Add an empty-state placeholder
-- [ ] Keep the first layout simple
+- [x] Create the main application layout
+- [x] Add the application title
+- [x] Add the expense section
+- [x] Add a total section placeholder
+- [x] Add an empty-state placeholder
+- [x] Keep the first layout simple
 
 ## Verification
 

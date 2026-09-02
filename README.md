@@ -47,5 +47,5 @@ This project is being developed with a focus on:
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:mousa1995/expense-tracker.git
 ```

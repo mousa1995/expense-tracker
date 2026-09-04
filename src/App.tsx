@@ -63,7 +63,9 @@ function App() {
           <h2>Total</h2>
           <p>
             {totalCalculator(expenses) > 0 ? (
-              <span>Total expense: {totalCalculator(expenses)}$</span>
+              <span>
+                Total expense from all expenses : {totalCalculator(expenses)}$
+              </span>
             ) : (
               "No Expenses yet."
             )}

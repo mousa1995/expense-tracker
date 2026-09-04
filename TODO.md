@@ -335,7 +335,7 @@ git commit -m "feat: add expense total calculation"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 
@@ -347,43 +347,43 @@ Allow users to filter expenses by category.
 
 ## Category Definition
 
-- [ ] Define the supported category values
-- [ ] Use the same category definition in the form
-- [ ] Use the same category definition in filtering
-- [ ] Prevent inconsistent category strings
-- [ ] Display categories consistently
+- [x] Define the supported category values
+- [x] Use the same category definition in the form
+- [x] Use the same category definition in filtering
+- [x] Prevent inconsistent category strings
+- [x] Display categories consistently
 
 ## Filter UI
 
-- [ ] Create a category filter control
-- [ ] Add an `All` option
-- [ ] Display every supported category
-- [ ] Handle filter changes
-- [ ] Type the filter state correctly
+- [x] Create a category filter control
+- [x] Add an `All` option
+- [x] Display every supported category
+- [x] Handle filter changes
+- [x] Type the filter state correctly
 
 ## Filtering Logic
 
-- [ ] Filter expenses by the selected category
-- [ ] Preserve the original expense collection
-- [ ] Display the filtered collection
-- [ ] Handle the `All` category
-- [ ] Handle a category with no matching expenses
-- [ ] Keep filtering logic understandable and maintainable
+- [x] Filter expenses by the selected category
+- [x] Preserve the original expense collection
+- [x] Display the filtered collection
+- [x] Handle the `All` category
+- [x] Handle a category with no matching expenses
+- [x] Keep filtering logic understandable and maintainable
 
 ## Total Behavior
 
-- [ ] Decide whether total represents all expenses or filtered expenses
-- [ ] Implement the chosen behavior consistently
-- [ ] Verify the result manually
+- [x] Decide whether total represents all expenses or filtered expenses
+- [x] Implement the chosen behavior consistently
+- [x] Verify the result manually
 
 ## Verification
 
-- [ ] Filter by each category
-- [ ] Select `All`
-- [ ] Test a category with no matching expenses
-- [ ] Add an expense and test the filter
-- [ ] Delete an expense and test the filter
-- [ ] Verify total behavior
+- [x] Filter by each category
+- [x] Select `All`
+- [x] Test a category with no matching expenses
+- [x] Add an expense and test the filter
+- [x] Delete an expense and test the filter
+- [x] Verify total behavior
 
 ## Git Commit
 
@@ -395,7 +395,7 @@ git commit -m "feat: add expense categories and filtering"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

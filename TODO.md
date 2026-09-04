@@ -262,7 +262,7 @@ git commit -m "feat: add expense form"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 
@@ -274,23 +274,23 @@ Allow users to remove an existing expense.
 
 ## Delete Flow
 
-- [ ] Add a delete button to `ExpenseItem`
-- [ ] Create the delete handler
-- [ ] Decide where deletion state logic belongs
-- [ ] Pass a delete callback through props
-- [ ] Type the callback prop correctly
-- [ ] Identify the expense by ID
-- [ ] Remove only the selected expense from state
+- [x] Add a delete button to `ExpenseItem`
+- [x] Create the delete handler
+- [x] Decide where deletion state logic belongs
+- [x] Pass a delete callback through props
+- [x] Type the callback prop correctly
+- [x] Identify the expense by ID
+- [x] Remove only the selected expense from state
 
 ## Verification
 
-- [ ] Delete one expense
-- [ ] Verify the correct expense disappears
-- [ ] Verify other expenses remain
-- [ ] Delete the first expense
-- [ ] Delete the last expense
-- [ ] Delete until the list is empty
-- [ ] Verify the empty state appears
+- [x] Delete one expense
+- [x] Verify the correct expense disappears
+- [x] Verify other expenses remain
+- [x] Delete the first expense
+- [x] Delete the last expense
+- [x] Delete until the list is empty
+- [x] Verify the empty state appears
 
 ## Git Commit
 
@@ -300,7 +300,7 @@ git commit -m "feat: add expense deletion"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

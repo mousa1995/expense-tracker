@@ -32,15 +32,22 @@ function App() {
     }
   };
 
+  const deleteHandler = (id: number) => {
+    const expenseWithDeletedItem = expenses.filter((expense) => {
+      return expense.id !== id;
+    });
+    setExpenses([...expenseWithDeletedItem]);
+  };
+
   return (
     <>
       <header>
-        <h1>Expense Tracker</h1>
+        <h1 onClick={() => console.log(expenses)}>Expense Tracker</h1>
       </header>
       <main>
         <section>
           <h2>Expenses</h2>
-          <ExpenseList expenses={expenses} />
+          <ExpenseList onDelete={deleteHandler} expenses={expenses} />
           <ExpenseForm
             onSubmit={(e: {
               person: string;

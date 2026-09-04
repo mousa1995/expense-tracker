@@ -3,9 +3,10 @@ import { ExpenseItem } from "./ExpenseItem";
 
 interface ExpenseListProps {
   expenses: Expense[];
+  onDelete: (e: number) => void;
 }
 
-export const ExpenseList = ({ expenses }: ExpenseListProps) => {
+export const ExpenseList = ({ expenses, onDelete }: ExpenseListProps) => {
   return (
     <>
       {expenses.length > 0 ? (
@@ -13,6 +14,8 @@ export const ExpenseList = ({ expenses }: ExpenseListProps) => {
           {expenses.map((expense) => {
             return (
               <ExpenseItem
+                onDelete={onDelete}
+                id={expense.id}
                 key={expense.id}
                 amount={expense.amount}
                 person={expense.person}

@@ -409,58 +409,58 @@ At the end of this phase, the application must be usable without a backend.
 
 ## MVP Features
 
-- [ ] View expenses
-- [ ] Add expense
-- [ ] Delete expense
-- [ ] Calculate total
-- [ ] Categorize expenses
-- [ ] Filter expenses
-- [ ] Validate form input
-- [ ] Handle empty states
-- [ ] Handle basic error states where relevant
+- [x] View expenses
+- [x] Add expense
+- [x] Delete expense
+- [x] Calculate total
+- [x] Categorize expenses
+- [x] Filter expenses
+- [x] Validate form input
+- [x] Handle empty states
+- [x] Handle basic error states where relevant
 
 ## Component Review
 
-- [ ] Review `App` responsibility
-- [ ] Review `ExpenseList` responsibility
-- [ ] Review `ExpenseItem` responsibility
-- [ ] Review `ExpenseForm` responsibility
-- [ ] Review filter responsibility
-- [ ] Confirm state lives at the appropriate level
-- [ ] Confirm props have meaningful names
-- [ ] Confirm callback props have clear names
-- [ ] Remove components that have no real responsibility
-- [ ] Avoid premature abstractions
+- [x] Review `App` responsibility
+- [x] Review `ExpenseList` responsibility
+- [x] Review `ExpenseItem` responsibility
+- [x] Review `ExpenseForm` responsibility
+- [x] Review filter responsibility
+- [x] Confirm state lives at the appropriate level
+- [x] Confirm props have meaningful names
+- [x] Confirm callback props have clear names
+- [x] Remove components that have no real responsibility
+- [x] Avoid premature abstractions
 
 ## TypeScript Review
 
-- [ ] Review all interfaces
-- [ ] Review callback types
-- [ ] Review event handler types
-- [ ] Remove avoidable `any`
-- [ ] Remove incorrect or overly broad types
-- [ ] Confirm data models match actual usage
+- [x] Review all interfaces
+- [x] Review callback types
+- [x] Review event handler types
+- [x] Remove avoidable `any`
+- [x] Remove incorrect or overly broad types
+- [x] Confirm data models match actual usage
 
 ## Code Quality
 
-- [ ] Remove unused imports
-- [ ] Remove dead code
-- [ ] Remove console debugging
-- [ ] Review naming
-- [ ] Review component naming
-- [ ] Review file naming
-- [ ] Review duplicated logic
-- [ ] Keep formatting consistent
+- [x] Remove unused imports
+- [x] Remove dead code
+- [x] Remove console debugging
+- [x] Review naming
+- [x] Review component naming
+- [x] Review file naming
+- [x] Review duplicated logic
+- [x] Keep formatting consistent
 
 ## Verification
 
-- [ ] Run `npm run lint`
-- [ ] Run `npm run build`
-- [ ] Run `npm run dev`
-- [ ] Manually test every MVP feature
-- [ ] Fix all TypeScript errors
-- [ ] Fix all ESLint errors
-- [ ] Check browser console for warnings/errors
+- [x] Run `npm run lint`
+- [x] Run `npm run build`
+- [x] Run `npm run dev`
+- [x] Manually test every MVP feature
+- [x] Fix all TypeScript errors
+- [x] Fix all ESLint errors
+- [x] Check browser console for warnings/errors
 
 ## Git Commit
 

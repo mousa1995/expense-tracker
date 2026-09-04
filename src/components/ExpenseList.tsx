@@ -5,7 +5,7 @@ import {
   expenseCategories,
   type ExpenseCategory,
 } from "../types/ExpenseCategory";
-import { totalCalculator } from "../utils/totoalCalculator";
+import { totalCalculator } from "../utils/totalCalculator";
 
 interface ExpenseListProps {
   expenses: Expense[];

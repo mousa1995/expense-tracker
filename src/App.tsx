@@ -6,6 +6,7 @@ import { expenses as initialExpenses } from "./data/expenses";
 import type { Expense } from "./types/Expense";
 import { idGenerator } from "./utils/idGenerator";
 import type { ExpenseCategory } from "./types/ExpenseCategory";
+import { totalCalculator } from "./utils/totoalCalculator";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([...initialExpenses]);
@@ -42,7 +43,9 @@ function App() {
   return (
     <>
       <header>
-        <h1 onClick={() => console.log(expenses)}>Expense Tracker</h1>
+        <h1 onClick={() => console.log(totalCalculator(expenses))}>
+          Expense Tracker
+        </h1>
       </header>
       <main>
         <section>
@@ -58,10 +61,13 @@ function App() {
         </section>
         <section>
           <h2>Total</h2>
-          <p>$0</p>
-        </section>
-        <section>
-          <p>No Expenses yet.</p>
+          <p>
+            {totalCalculator(expenses) > 0 ? (
+              <span>Total expense: {totalCalculator(expenses)}$</span>
+            ) : (
+              "No Expenses yet."
+            )}
+          </p>
         </section>
       </main>
     </>

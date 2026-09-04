@@ -312,20 +312,20 @@ Calculate and display total spending.
 
 ## Total Calculation
 
-- [ ] Calculate the total from the current expense collection
-- [ ] Decide where derived total logic should live
-- [ ] Display the total amount
-- [ ] Format the total consistently
-- [ ] Handle an empty expense list correctly
+- [x] Calculate the total from the current expense collection
+- [x] Decide where derived total logic should live
+- [x] Display the total amount
+- [x] Format the total consistently
+- [x] Handle an empty expense list correctly
 
 ## Verification
 
-- [ ] Verify total with zero expenses
-- [ ] Verify total with one expense
-- [ ] Verify total with multiple expenses
-- [ ] Add an expense and verify the total updates
-- [ ] Delete an expense and verify the total updates
-- [ ] Confirm the total is calculated from current data
+- [x] Verify total with zero expenses
+- [x] Verify total with one expense
+- [x] Verify total with multiple expenses
+- [x] Add an expense and verify the total updates
+- [x] Delete an expense and verify the total updates
+- [x] Confirm the total is calculated from current data
 
 ## Git Commit
 

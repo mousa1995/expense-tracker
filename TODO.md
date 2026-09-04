@@ -202,57 +202,55 @@ Allow users to create a new expense through a form.
 
 ## Expense Form
 
-- [ ] Create `ExpenseForm`
-- [ ] Add title input
-- [ ] Add amount input
-- [ ] Add category select
-- [ ] Add date input
-- [ ] Add submit button
-- [ ] Use semantic HTML form elements
+- [x] Create `ExpenseForm`
+- [x] Add person input
+- [x] Add amount input
+- [x] Add category select
+- [x] Add submit button
+- [x] Use semantic HTML form elements
 
 ## Form State
 
-- [ ] Create state for form fields
-- [ ] Decide whether to use one state object or separate states
-- [ ] Handle input changes
-- [ ] Type form event handlers correctly
-- [ ] Handle category changes
-- [ ] Handle date changes
-- [ ] Handle form submission
-- [ ] Prevent the browser's default submit behavior
+- [x] Create state for form fields
+- [x] Decide whether to use one state object or separate states
+- [x] Handle input changes
+- [x] Type form event handlers correctly
+- [x] Handle category changes
+- [x] Handle form submission
+- [x] Prevent the browser's default submit behavior
 
 ## Creating an Expense
 
-- [ ] Build the new expense object
-- [ ] Generate a unique expense ID
-- [ ] Add the new expense to application state
-- [ ] Update the visible expense list
-- [ ] Reset the form after successful submission
+- [x] Build the new expense object
+- [x] Generate a unique expense ID
+- [x] Add the new expense to application state
+- [x] Update the visible expense list
+- [x] Reset the form after successful submission
 
 ## Validation
 
-- [ ] Prevent an empty title
-- [ ] Prevent an invalid amount
-- [ ] Prevent a missing category
-- [ ] Prevent a missing date
-- [ ] Display useful validation feedback
-- [ ] Verify invalid data does not enter the expense list
+- [x] Prevent an empty person
+- [x] Prevent an invalid amount
+- [x] Prevent a missing category and check that turns to other
+- [x] Handle missing/empty category according to the business rule
+- [x] Display useful validation feedback
+- [x] Verify invalid data does not enter the expense list
 
 ## Data Flow
 
-- [ ] Decide where the source of truth for expenses lives
-- [ ] Pass the required callback from parent to form
-- [ ] Type the callback prop correctly
-- [ ] Keep form presentation separate from expense collection state where appropriate
+- [x] Decide where the source of truth for expenses lives
+- [x] Pass the required callback from parent to form
+- [x] Type the callback prop correctly
+- [x] Keep form presentation separate from expense collection state where appropriate
 
 ## Verification
 
-- [ ] Create a valid expense
-- [ ] Confirm it appears in the list
-- [ ] Confirm all entered values are correct
-- [ ] Confirm the form resets
-- [ ] Test invalid inputs
-- [ ] Test multiple new expenses
+- [x] Create a valid expense
+- [x] Confirm it appears in the list
+- [x] Confirm all entered values are correct
+- [x] Confirm the form resets
+- [x] Test invalid inputs
+- [x] Test multiple new expenses
 
 ## Git Commit
 

@@ -49,8 +49,15 @@ function App() {
         return;
       }
       const parsedExpenses = JSON.parse(data as string);
-      if (Array.isArray(parsedExpenses)) {
+
+      if (Array.isArray(parsedExpenses) && parsedExpenses.length > 0) {
         setExpenses([...parsedExpenses]);
+        return;
+      }
+
+      //edge case => parsedExpense == "[]"
+      if (Array.isArray(parsedExpenses) && parsedExpenses.length === 0) {
+        setExpenses([...initialExpenses]);
         return;
       }
       console.log("Invalid data");

@@ -496,14 +496,14 @@ Keep expenses after a page refresh.
 
 ## Verification
 
-- [ ] Add an expense
-- [ ] Refresh the page
-- [ ] Confirm the expense remains
-- [ ] Delete an expense
-- [ ] Refresh the page
-- [ ] Confirm deletion persists
-- [ ] Test an empty localStorage state
-- [ ] Test malformed stored data
+- [x] Add an expense
+- [x] Refresh the page
+- [x] Confirm the expense remains
+- [x] Delete an expense
+- [x] Refresh the page
+- [x] Confirm deletion persists
+- [x] Test an empty localStorage state
+- [x] Test malformed stored data
 
 ## Git Commit
 
@@ -513,7 +513,7 @@ git commit -m "feat: persist expenses locally"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

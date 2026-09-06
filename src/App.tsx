@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { ExpenseForm } from "./components/ExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
@@ -9,7 +9,7 @@ import type { ExpenseCategory } from "./types/ExpenseCategory";
 import { totalCalculator } from "./utils/totalCalculator";
 
 function App() {
-  const [expenses, setExpenses] = useState<Expense[]>([...initialExpenses]);
+  const [expenses, setExpenses] = useState<Expense[]>([]);
 
   const expenseMaker = (formData: {
     person: string;
@@ -40,10 +40,36 @@ function App() {
     setExpenses([...expenseWithDeletedItem]);
   };
 
+  useEffect(() => {
+    try {
+      const data = localStorage.getItem("expenses");
+      if (data === null) {
+        setExpenses([...initialExpenses]);
+        localStorage.setItem("expenses", JSON.stringify(initialExpenses));
+        return;
+      }
+      const parsedExpenses = JSON.parse(data as string);
+      if (Array.isArray(parsedExpenses)) {
+        setExpenses([...parsedExpenses]);
+        return;
+      }
+      console.log("Invalid data");
+      return;
+    } catch {
+      console.error("invalid JSON");
+    }
+  }, []);
+
   return (
     <>
       <header>
-        <h1>Expense Tracker</h1>
+        <h1
+          onClick={() => {
+            console.log(expenses);
+          }}
+        >
+          Expense Tracker
+        </h1>
       </header>
       <main>
         <section>

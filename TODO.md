@@ -472,7 +472,7 @@ git commit -m "feat: complete expense tracker frontend MVP"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 
@@ -484,12 +484,12 @@ Keep expenses after a page refresh.
 
 ## Local Storage
 
-- [ ] Choose a consistent localStorage key
-- [ ] Save expenses to localStorage
-- [ ] Load expenses when the app starts
-- [ ] Handle missing localStorage data
-- [ ] Parse stored JSON safely
-- [ ] Handle invalid stored data safely
+- [x] Choose a consistent localStorage key
+- [x] Save expenses to localStorage
+- [x] Load expenses when the app starts
+- [x] Handle missing localStorage data
+- [x] Parse stored JSON safely
+- [x] Handle invalid stored data safely
 - [ ] Save changes after adding an expense
 - [ ] Save changes after deleting an expense
 - [ ] Save changes after editing an expense once editing exists

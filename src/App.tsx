@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { ExpenseForm } from "./components/ExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
@@ -10,6 +10,7 @@ import { totalCalculator } from "./utils/totalCalculator";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
+  const isFirstRender = useRef(true);
 
   const expenseMaker = (formData: {
     person: string;
@@ -43,29 +44,50 @@ function App() {
   useEffect(() => {
     try {
       const data = localStorage.getItem("expenses");
-      if (data === null) {
+
+      //handle first render
+      if (data === null && isFirstRender.current) {
         setExpenses([...initialExpenses]);
         localStorage.setItem("expenses", JSON.stringify(initialExpenses));
+        isFirstRender.current = false;
         return;
       }
       const parsedExpenses = JSON.parse(data as string);
 
-      if (Array.isArray(parsedExpenses) && parsedExpenses.length > 0) {
+      if (
+        Array.isArray(parsedExpenses) &&
+        parsedExpenses.length > 0 &&
+        isFirstRender.current
+      ) {
         setExpenses([...parsedExpenses]);
+        isFirstRender.current = false;
         return;
       }
 
       //edge case => parsedExpense == "[]"
-      if (Array.isArray(parsedExpenses) && parsedExpenses.length === 0) {
+      if (
+        Array.isArray(parsedExpenses) &&
+        parsedExpenses.length === 0 &&
+        isFirstRender.current
+      ) {
         setExpenses([...initialExpenses]);
+        isFirstRender.current = false;
         return;
       }
-      console.log("Invalid data");
-      return;
+
+      if (isFirstRender.current) {
+        console.log("Invalid data");
+        return;
+      }
+
+      //handel when saving expense and deleting
+      if (!isFirstRender.current) {
+        localStorage.setItem("expenses", JSON.stringify(expenses));
+      }
     } catch {
       console.error("invalid JSON");
     }
-  }, []);
+  }, [expenses]);
 
   return (
     <>

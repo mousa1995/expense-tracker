@@ -490,8 +490,8 @@ Keep expenses after a page refresh.
 - [x] Handle missing localStorage data
 - [x] Parse stored JSON safely
 - [x] Handle invalid stored data safely
-- [ ] Save changes after adding an expense
-- [ ] Save changes after deleting an expense
+- [x] Save changes after adding an expense
+- [x] Save changes after deleting an expense
 - [ ] Save changes after editing an expense once editing exists
 
 ## Verification

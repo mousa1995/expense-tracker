@@ -525,11 +525,11 @@ Introduce a real backend while keeping the frontend contract clear.
 
 ## Backend Project
 
-- [ ] Create the Laravel backend project
-- [ ] Verify Laravel installation
-- [ ] Configure the local environment
-- [ ] Verify the Laravel development server starts
-- [ ] Verify a test route works
+- [x] Create the Laravel backend project
+- [x] Verify Laravel installation
+- [x] Configure the local environment
+- [x] Verify the Laravel development server starts
+- [x] Verify a test route works
 - [ ] Decide backend/frontend directory structure
 - [ ] Keep frontend and backend responsibilities separate
 

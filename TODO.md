@@ -530,8 +530,8 @@ Introduce a real backend while keeping the frontend contract clear.
 - [x] Configure the local environment
 - [x] Verify the Laravel development server starts
 - [x] Verify a test route works
-- [ ] Decide backend/frontend directory structure
-- [ ] Keep frontend and backend responsibilities separate
+- [x] Decide backend/frontend directory structure
+- [x] Keep frontend and backend responsibilities separate
 
 ## API Design
 
@@ -549,18 +549,18 @@ DELETE /api/expenses/{expense}
 
 ## API Contract
 
-- [ ] Define request shape for creating an expense
-- [ ] Define request shape for updating an expense
-- [ ] Define response shape
-- [ ] Define validation errors
-- [ ] Define not-found behavior
-- [ ] Define success status codes
-- [ ] Define error status codes
-- [ ] Keep the API contract predictable
+- [x] Define request shape for creating an expense
+- [x] Define request shape for updating an expense
+- [x] Define response shape
+- [x] Define validation errors
+- [x] Define not-found behavior
+- [x] Define success status codes
+- [x] Define error status codes
+- [x] Keep the API contract predictable
 
 ## Laravel Structure
 
-- [ ] Create API routes
+- [x] Create API routes
 - [ ] Create `ExpenseController`
 - [ ] Create request validation structure
 - [ ] Create response structure

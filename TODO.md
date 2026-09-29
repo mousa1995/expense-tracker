@@ -561,8 +561,8 @@ DELETE /api/expenses/{expense}
 ## Laravel Structure
 
 - [x] Create API routes
-- [ ] Create `ExpenseController`
-- [ ] Create request validation structure
+- [x] Create `ExpenseController`
+- [x] Create request validation structure
 - [ ] Create response structure
 - [ ] Keep controller responsibilities clear
 

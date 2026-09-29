@@ -2,18 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExpenseController;
 
-Route::get('/user', function (Request $request) {
-    return 'api is working !';
-});
+Route::get("/expenses", [ExpenseController::class , 'index']);
 
-Route::get("/expenses", function(){
-    return response()->json([]);
-});
-
-Route::post("/expenses", function(){
-    return response()->json([]);
-});
+Route::post("/expenses", [ExpenseController::class , 'store']);
 
 Route::get("/expenses/{expense}", function($expense){
     return response()->json([
@@ -21,7 +14,7 @@ Route::get("/expenses/{expense}", function($expense){
     ]);
 });
 
-Route::put("/expense/{expense}", function($expense){
+Route::put("/expenses/{expense}", function($expense){
     return response()->json([
         'id' => $expense,
     ]);

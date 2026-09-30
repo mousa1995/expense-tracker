@@ -17,6 +17,10 @@ class ExpenseController extends Controller
             "category" => "required|string",
         ]);
 
-        return response()->json($validated);
+        return response()->json([
+            "success" => true,
+            "message" => "Expence created succesfully",
+            "data" => $validated,
+        ], 201);
     }
 }

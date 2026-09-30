@@ -563,6 +563,23 @@ DELETE /api/expenses/{expense}
 - [x] Create API routes
 - [x] Create `ExpenseController`
 - [x] Create request validation structure
+
+### Prerequisites for Response Structure
+
+- [ ] Understand Database
+- [ ] Understand Migration
+- [ ] Create Expense migration
+- [ ] Run migration
+- [ ] Understand Model
+- [ ] Create Expense model
+- [ ] Understand Eloquent
+- [ ] Learn `Expense::all()`
+- [ ] Learn `Expense::find()`
+- [ ] Learn `Expense::create()`
+- [ ] Use Expense model in Controller
+- [ ] Return real expenses in API response
+- [ ] Complete response structure
+
 - [ ] Create response structure
 - [ ] Keep controller responsibilities clear
 

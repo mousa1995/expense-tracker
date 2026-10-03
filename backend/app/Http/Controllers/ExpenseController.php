@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 class ExpenseController extends Controller
 {
     public function index () {
-        return response()->json([]);
+        return response()->json([
+            "success" => true,
+            "message" => "list of all expenses.",
+            "data" => [],
+        ], 200);
     }
 
     public function store(Request $request) {
@@ -19,7 +23,7 @@ class ExpenseController extends Controller
 
         return response()->json([
             "success" => true,
-            "message" => "Expence created succesfully",
+            "message" => "Expence created successfully",
             "data" => $validated,
         ], 201);
     }

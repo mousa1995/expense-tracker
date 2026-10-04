@@ -630,7 +630,7 @@ updated_at
 ## Controller Integration
 
 - [x] Read expenses from the database
-- [ ] Create expenses in the database
+- [x] Create expenses in the database
 - [ ] Read a single expense
 - [ ] Update an expense
 - [ ] Delete an expense

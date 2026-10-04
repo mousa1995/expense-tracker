@@ -24,10 +24,12 @@ class ExpenseController extends Controller
             "category" => "required|string",
         ]);
 
+        $expense = Expense::create($validated);
+
         return response()->json([
             "success" => true,
-            "message" => "Expence created successfully",
-            "data" => $validated,
+            "message" => "Expense created successfully",
+            "data" => $expense,
         ], 201);
     }
 }

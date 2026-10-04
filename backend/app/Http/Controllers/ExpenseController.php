@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Expense;
 
 class ExpenseController extends Controller
 {
     public function index () {
+        $expenses =  Expense::query()->get();
+
         return response()->json([
             "success" => true,
             "message" => "list of all expenses.",
-            "data" => [],
+            "data" => $expenses,
         ], 200);
     }
 

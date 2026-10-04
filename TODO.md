@@ -581,7 +581,7 @@ git commit -m "feat: add Laravel expense API"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 
@@ -593,9 +593,9 @@ Persist expenses in a real relational database.
 
 ## Database Choice
 
-- [ ] Choose the SQL database for development
-- [ ] Configure Laravel database connection
-- [ ] Verify Laravel can connect to the database
+- [x] Choose the SQL database for development
+- [x] Configure Laravel database connection
+- [x] Verify Laravel can connect to the database
 
 ## Expense Table
 
@@ -613,12 +613,12 @@ updated_at
 
 ## Migration
 
-- [ ] Create the expenses migration
-- [ ] Define all required columns
-- [ ] Choose suitable database column types
-- [ ] Add timestamps
-- [ ] Run the migration
-- [ ] Verify the table exists
+- [x] Create the expenses migration
+- [x] Define all required columns
+- [x] Choose suitable database column types
+- [x] Add timestamps
+- [x] Run the migration
+- [x] Verify the table exists
 
 ## Laravel Model
 

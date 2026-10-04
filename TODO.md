@@ -622,10 +622,10 @@ updated_at
 
 ## Laravel Model
 
-- [ ] Create the `Expense` model
-- [ ] Define mass-assignable fields
-- [ ] Configure casts where appropriate
-- [ ] Verify model/database mapping
+- [x] Create the `Expense` model
+- [x] Define mass-assignable fields
+- [x] Configure casts where appropriate
+- [x] Verify model/database mapping
 
 ## Controller Integration
 

@@ -631,7 +631,7 @@ updated_at
 
 - [x] Read expenses from the database
 - [x] Create expenses in the database
-- [ ] Read a single expense
+- [x] Read a single expense
 - [ ] Update an expense
 - [ ] Delete an expense
 - [ ] Handle missing records

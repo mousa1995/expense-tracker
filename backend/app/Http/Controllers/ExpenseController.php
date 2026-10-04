@@ -32,4 +32,15 @@ class ExpenseController extends Controller
             "data" => $expense,
         ], 201);
     }
+
+    public function show($expense) {
+     
+    $thisExpense = Expense::find($expense);
+    
+    return response()->json([
+        "success" => true,
+        "message" => "expense with id $expense",
+        "data" => $thisExpense,
+    ], 200);
+    }
 }

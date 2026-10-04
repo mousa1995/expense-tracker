@@ -8,11 +8,7 @@ Route::get("/expenses", [ExpenseController::class , 'index']);
 
 Route::post("/expenses", [ExpenseController::class , 'store']);
 
-Route::get("/expenses/{expense}", function($expense){
-    return response()->json([
-        'id' => $expense,
-    ]);
-});
+Route::get("/expenses/{expense}" , [ExpenseController::class , 'show']);
 
 Route::put("/expenses/{expense}", function($expense){
     return response()->json([

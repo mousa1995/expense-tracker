@@ -33,9 +33,17 @@ class ExpenseController extends Controller
         ], 201);
     }
 
-    public function show($expense) {
+    public function show(int $expense) {
      
     $thisExpense = Expense::find($expense);
+
+    if(!$thisExpense) {
+        return response()->json([
+            "success" => false,
+            "message" => "Expense with id=$expense not found!",
+            "data" => [],
+        ], 404);
+    }
     
     return response()->json([
         "success" => true,

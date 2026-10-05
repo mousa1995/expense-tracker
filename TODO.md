@@ -634,7 +634,7 @@ updated_at
 - [x] Read a single expense
 - [ ] Update an expense
 - [ ] Delete an expense
-- [ ] Handle missing records
+- [x] Handle missing records
 - [ ] Validate incoming data
 
 ## Verification

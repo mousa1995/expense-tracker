@@ -632,7 +632,7 @@ updated_at
 - [x] Read expenses from the database
 - [x] Create expenses in the database
 - [x] Read a single expense
-- [ ] Update an expense
+- [x] Update an expense
 - [ ] Delete an expense
 - [x] Handle missing records
 - [ ] Validate incoming data

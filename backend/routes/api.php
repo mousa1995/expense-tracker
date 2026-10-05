@@ -10,11 +10,7 @@ Route::post("/expenses", [ExpenseController::class , 'store']);
 
 Route::get("/expenses/{expense}" , [ExpenseController::class , 'show']);
 
-Route::put("/expenses/{expense}", function($expense){
-    return response()->json([
-        'id' => $expense,
-    ]);
-});
+Route::put("/expenses/{expense}", [ExpenseController::class, 'update']);
 
 Route::delete("/expenses/{expense}", function($expense){
     return response()->noContent();

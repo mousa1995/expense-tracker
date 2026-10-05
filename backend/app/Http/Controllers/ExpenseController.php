@@ -51,4 +51,36 @@ class ExpenseController extends Controller
         "data" => $thisExpense,
     ], 200);
     }
+
+    public function update(Request $request, int $expense) {
+        //1. check if $expense exists 
+        $thisExpense = Expense::find($expense);
+
+        //2. return invalid (404) if not exists
+        if(!$thisExpense) {
+            return response()->json([
+                "success" => false,
+                "message" => "expense not found during update (404)",
+                "data" => [],
+            ], 404);
+        }
+
+        //3. validate && update the expense 
+        $validated = $request->validate([
+            "amount" => "required|numeric",
+            "person" => "required|string",
+            "category" => "required|string",
+        ]);
+
+        $updatedExpense = $thisExpense->update($validated);
+
+        //4. return correct json
+        if(!!$updatedExpense) {
+            return response()->json([
+            "success" => true,
+            "message" => "expense updated successfully!",
+            "data" => $thisExpense,
+        ],200);
+        } 
+    }
 }

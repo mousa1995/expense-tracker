@@ -633,9 +633,9 @@ updated_at
 - [x] Create expenses in the database
 - [x] Read a single expense
 - [x] Update an expense
-- [ ] Delete an expense
+- [x] Delete an expense
 - [x] Handle missing records
-- [ ] Validate incoming data
+- [x] Validate incoming data
 
 ## Verification
 

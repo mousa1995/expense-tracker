@@ -83,4 +83,28 @@ class ExpenseController extends Controller
         ],200);
         } 
     }
+
+    public function destroy(int $expense) {
+        //1. select the column using id
+        $thisExpense = Expense::find($expense);
+
+            // if not found return 404
+            if(!$thisExpense) {
+                return response()->json([
+                    "success" => false,
+                    "message" => "corresponding expense not found during deletion",
+                    "data" => [],
+                ], 404);
+            }
+        // if code reaches here the expense is selected and stored in $thisExpense!
+        // 2. delete the selected expense
+        
+        $thisExpense->delete();
+        return response()->json([
+          "success" => true,
+          "message" => "delete of expense successfull",
+          "data" => [],
+        ],200);
+        
+    }
 }

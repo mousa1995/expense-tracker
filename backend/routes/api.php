@@ -12,6 +12,4 @@ Route::get("/expenses/{expense}" , [ExpenseController::class , 'show']);
 
 Route::put("/expenses/{expense}", [ExpenseController::class, 'update']);
 
-Route::delete("/expenses/{expense}", function($expense){
-    return response()->noContent();
-});
+Route::delete("/expenses/{expense}", [ExpenseController::class, 'destroy']);

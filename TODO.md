@@ -639,13 +639,13 @@ updated_at
 
 ## Verification
 
-- [ ] Create an expense through the API
-- [ ] Confirm the record exists in SQL
-- [ ] Retrieve the record
-- [ ] Update the record
-- [ ] Delete the record
-- [ ] Confirm deletion in SQL
-- [ ] Verify invalid input is rejected
+- [x] Create an expense through the API
+- [x] Confirm the record exists in SQL
+- [x] Retrieve the record
+- [x] Update the record
+- [x] Delete the record
+- [x] Confirm deletion in SQL
+- [x] Verify invalid input is rejected
 
 ## Git Commit
 
@@ -655,7 +655,7 @@ git commit -m "feat: add SQL persistence for expenses"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

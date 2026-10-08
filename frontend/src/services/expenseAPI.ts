@@ -15,6 +15,7 @@ export const getExpenses = async () => {
   }
 };
 
+//POST PART!
 export const createExpense = async ({
   person,
   amount,

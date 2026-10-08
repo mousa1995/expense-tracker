@@ -3,7 +3,6 @@ import "./App.css";
 import { ExpenseForm } from "./components/ExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
 import type { Expense } from "./types/Expense";
-import { idGenerator } from "./utils/idGenerator";
 import type { ExpenseCategory } from "./types/ExpenseCategory";
 import { totalCalculator } from "./utils/totalCalculator";
 import { createExpense, getExpenses } from "./services/expenseAPI";
@@ -11,25 +10,23 @@ import { createExpense, getExpenses } from "./services/expenseAPI";
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
 
-  const expenseMaker = (formData: {
+  const expenseMaker = async (formData: {
     person: string;
     amount: string;
     category: ExpenseCategory | "";
   }) => {
-    const expenseID = idGenerator(expenses);
     if (formData.category === "") {
       formData.category = "other";
     }
     if (formData.amount !== "" && formData.person !== "") {
-      setExpenses([
-        ...expenses,
-        {
-          person: formData.person,
-          amount: Number(formData.amount),
-          category: formData.category,
-          id: expenseID,
-        } as Expense,
-      ]);
+      //1. insert data to db
+      await createExpense(formData);
+
+      //2. get all expenses from db
+      const expenses = await getExpenses();
+
+      //3. set new expenses to state
+      setExpenses(expenses.data);
     }
   };
 
@@ -54,11 +51,7 @@ function App() {
         <h1
           onClick={() => {
             // test
-            createExpense({
-              amount: "3000",
-              person: "mousa",
-              category: "food",
-            });
+            console.log("this is for test");
           }}
         >
           Expense Tracker

@@ -1,13 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { ExpenseForm } from "./components/ExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
-import { expenses as initialExpenses } from "./data/expenses";
 import type { Expense } from "./types/Expense";
 import { idGenerator } from "./utils/idGenerator";
 import type { ExpenseCategory } from "./types/ExpenseCategory";
 import { totalCalculator } from "./utils/totalCalculator";
-import { getExpenses } from "./services/expenseAPI";
+import { createExpense, getExpenses } from "./services/expenseAPI";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -54,7 +53,12 @@ function App() {
       <header>
         <h1
           onClick={() => {
-            console.log();
+            // test
+            createExpense({
+              amount: "3000",
+              person: "mousa",
+              category: "food",
+            });
           }}
         >
           Expense Tracker

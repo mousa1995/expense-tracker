@@ -16,3 +16,11 @@ export const getExpenses = async () => {
     }
 }
 
+export const createExpense = async () => {
+    try {
+        // how to get person body and amount ?
+        //const newExpense = ?
+    }catch(e) {
+        console.error(e);
+    }
+}

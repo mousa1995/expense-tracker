@@ -677,8 +677,8 @@ Make the backend and frontend work together.
 
 ## Fetching Expenses
 
-- [ ] Load expenses from the Laravel API
-- [ ] Store API data in frontend state
+- [x] Load expenses from the Laravel API
+- [x] Store API data in frontend state
 - [ ] Display a loading state
 - [ ] Handle a failed GET request
 - [ ] Display an error message when appropriate

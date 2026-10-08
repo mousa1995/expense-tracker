@@ -7,10 +7,10 @@ import type { Expense } from "./types/Expense";
 import { idGenerator } from "./utils/idGenerator";
 import type { ExpenseCategory } from "./types/ExpenseCategory";
 import { totalCalculator } from "./utils/totalCalculator";
+import { getExpenses } from "./services/expenseAPI";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
-  const isFirstRender = useRef(true);
 
   const expenseMaker = (formData: {
     person: string;
@@ -42,59 +42,19 @@ function App() {
   };
 
   useEffect(() => {
-    try {
-      const data = localStorage.getItem("expenses");
-
-      //handle first render
-      if (data === null && isFirstRender.current) {
-        setExpenses([...initialExpenses]);
-        localStorage.setItem("expenses", JSON.stringify(initialExpenses));
-        isFirstRender.current = false;
-        return;
-      }
-      const parsedExpenses = JSON.parse(data as string);
-
-      if (
-        Array.isArray(parsedExpenses) &&
-        parsedExpenses.length > 0 &&
-        isFirstRender.current
-      ) {
-        setExpenses([...parsedExpenses]);
-        isFirstRender.current = false;
-        return;
-      }
-
-      //edge case => parsedExpense == "[]"
-      if (
-        Array.isArray(parsedExpenses) &&
-        parsedExpenses.length === 0 &&
-        isFirstRender.current
-      ) {
-        setExpenses([...initialExpenses]);
-        isFirstRender.current = false;
-        return;
-      }
-
-      if (isFirstRender.current) {
-        console.log("Invalid data");
-        return;
-      }
-
-      //handel when saving expense and deleting
-      if (!isFirstRender.current) {
-        localStorage.setItem("expenses", JSON.stringify(expenses));
-      }
-    } catch {
-      console.error("invalid JSON");
-    }
-  }, [expenses]);
-
+    // 1. get expenses from db and set all expenses inside state
+    const loadExpenses = async () => {
+      const expenses = await getExpenses();
+      setExpenses(expenses.data);
+    };
+    loadExpenses();
+  }, []);
   return (
     <>
       <header>
         <h1
           onClick={() => {
-            console.log(expenses);
+            console.log();
           }}
         >
           Expense Tracker

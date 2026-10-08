@@ -670,7 +670,7 @@ Make the backend and frontend work together.
 - [x] Create a frontend API service layer
 - [x] Create `getExpenses`
 - [x] Create `createExpense`
-- [ ] Create `deleteExpense`
+- [x] Create `deleteExpense`
 - [ ] Create `getExpense` if the UI needs it
 - [ ] Create `updateExpense` when editing is implemented
 - [x] Keep HTTP logic separate from UI components where appropriate

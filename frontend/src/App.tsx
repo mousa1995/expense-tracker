@@ -5,7 +5,11 @@ import { ExpenseList } from "./components/ExpenseList";
 import type { Expense } from "./types/Expense";
 import type { ExpenseCategory } from "./types/ExpenseCategory";
 import { totalCalculator } from "./utils/totalCalculator";
-import { createExpense, getExpenses } from "./services/expenseAPI";
+import {
+  createExpense,
+  deleteExpense,
+  getExpenses,
+} from "./services/expenseAPI";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -30,11 +34,10 @@ function App() {
     }
   };
 
-  const deleteHandler = (id: number) => {
-    const expenseWithDeletedItem = expenses.filter((expense) => {
-      return expense.id !== id;
-    });
-    setExpenses([...expenseWithDeletedItem]);
+  const deleteHandler = async (id: number) => {
+    await deleteExpense(id);
+    const expenses = await getExpenses();
+    setExpenses(expenses.data);
   };
 
   useEffect(() => {
@@ -51,7 +54,7 @@ function App() {
         <h1
           onClick={() => {
             // test
-            console.log("this is for test");
+            console.log("test");
           }}
         >
           Expense Tracker

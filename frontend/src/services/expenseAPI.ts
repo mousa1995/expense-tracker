@@ -44,3 +44,20 @@ export const createExpense = async ({
     console.error(e);
   }
 };
+
+//DELETE PART
+export const deleteExpense = async (id: number) => {
+  try {
+    //1. fetch a delete using id we have
+    const URL = `http://127.0.0.1:8000/api/expenses/${id}`;
+    const response = await fetch(URL, {
+      headers: { "Content-Type": "application/json" },
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      throw new Error(`deletion of expense with id:${id} failed.`);
+    }
+  } catch (e) {
+    throw new Error(`${e}`);
+  }
+};

@@ -1,6 +1,6 @@
 body {
-    background: #212830;
-    color: #9198a1;
+  background: #212830;
+  color: #9198a1;
 }
 
 .counter {
@@ -172,7 +172,7 @@ body {
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;

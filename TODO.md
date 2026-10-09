@@ -671,7 +671,7 @@ Make the backend and frontend work together.
 - [x] Create `getExpenses`
 - [x] Create `createExpense`
 - [x] Create `deleteExpense`
-- [ ] Create `getExpense` if the UI needs it
+- [s] Create `getExpense` if the UI needs it
 - [ ] Create `updateExpense` when editing is implemented
 - [x] Keep HTTP logic separate from UI components where appropriate
 
@@ -679,6 +679,7 @@ Make the backend and frontend work together.
 
 - [x] Load expenses from the Laravel API
 - [x] Store API data in frontend state
+- [x] Make a isLoading component
 - [ ] Display a loading state
 - [ ] Handle a failed GET request
 - [ ] Display an error message when appropriate

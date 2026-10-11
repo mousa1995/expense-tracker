@@ -10,6 +10,8 @@ const css: CSSProperties = {
   minWidth: "100%",
   zIndex: 999,
   inset: 0,
+  color: "blue",
+  fontSize: 24,
 };
 
 const IsLoading = () => {

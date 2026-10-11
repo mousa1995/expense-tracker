@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { ExpenseForm } from "./components/ExpenseForm";
 import { ExpenseList } from "./components/ExpenseList";
+import IsLoading from "./components/IsLoading";
 import type { Expense } from "./types/Expense";
 import type { ExpenseCategory } from "./types/ExpenseCategory";
 import { totalCalculator } from "./utils/totalCalculator";
@@ -13,43 +14,66 @@ import {
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const expenseMaker = async (formData: {
     person: string;
     amount: string;
     category: ExpenseCategory | "";
   }) => {
-    if (formData.category === "") {
-      formData.category = "other";
-    }
-    if (formData.amount !== "" && formData.person !== "") {
-      //1. insert data to db
-      await createExpense(formData);
+    setIsLoading(true);
+    try {
+      if (formData.category === "") {
+        formData.category = "other";
+      }
+      if (formData.amount !== "" && formData.person !== "") {
+        //1. insert data to db
+        await createExpense(formData);
 
-      //2. get all expenses from db
-      const expenses = await getExpenses();
+        //2. get all expenses from db
+        const expenses = await getExpenses();
 
-      //3. set new expenses to state
-      setExpenses(expenses.data);
+        //3. set new expenses to state
+        setExpenses(expenses.data);
+      }
+    } catch (e) {
+      throw new Error(`${e}`);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const deleteHandler = async (id: number) => {
-    await deleteExpense(id);
-    const expenses = await getExpenses();
-    setExpenses(expenses.data);
+    setIsLoading(true);
+    try {
+      await deleteExpense(id);
+      const expenses = await getExpenses();
+      setExpenses(expenses.data);
+    } catch (e) {
+      throw new Error(`${e}`);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
     // 1. get expenses from db and set all expenses inside state
     const loadExpenses = async () => {
-      const expenses = await getExpenses();
-      setExpenses(expenses.data);
+      try {
+        setIsLoading(true);
+        const expenses = await getExpenses();
+        setExpenses(expenses.data);
+      } catch (e) {
+        throw new Error(`${e}`);
+      } finally {
+        setIsLoading(false);
+      }
     };
     loadExpenses();
   }, []);
   return (
     <>
+      {isLoading && <IsLoading />}
       <header>
         <h1
           onClick={() => {

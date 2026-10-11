@@ -680,7 +680,7 @@ Make the backend and frontend work together.
 - [x] Load expenses from the Laravel API
 - [x] Store API data in frontend state
 - [x] Make a isLoading component
-- [ ] Display a loading state
+- [x] Display a loading state
 - [ ] Handle a failed GET request
 - [ ] Display an error message when appropriate
 

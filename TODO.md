@@ -691,7 +691,7 @@ Make the backend and frontend work together.
 - [x] Add returned expense to the UI or refetch the list
 - [x] Handle validation errors from Laravel
 - [x] Handle network/server errors
-- [s] Prevent duplicate submissions
+- [x] Prevent duplicate submissions
 
 ## Deleting Expenses
 

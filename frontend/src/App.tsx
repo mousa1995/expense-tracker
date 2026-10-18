@@ -120,6 +120,7 @@ function App() {
               amount: string;
               category: ExpenseCategory | "";
             }) => expenseMaker(e)}
+            isLoading={isLoading}
           />
         </section>
         <section>

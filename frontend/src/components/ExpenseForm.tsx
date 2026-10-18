@@ -11,9 +11,10 @@ interface ExpenseFormProps {
     amount: string;
     category: ExpenseCategory | "";
   }) => void;
+  isLoading: boolean;
 }
 
-export const ExpenseForm = ({ onSubmit }: ExpenseFormProps) => {
+export const ExpenseForm = ({ onSubmit, isLoading }: ExpenseFormProps) => {
   const [form, setForm] = useState<{
     person: string;
     amount: string;
@@ -88,7 +89,9 @@ export const ExpenseForm = ({ onSubmit }: ExpenseFormProps) => {
             })}
           </select>
         </label>
-        <button type="submit">Add expense</button>
+        <button type="submit" disabled={isLoading}>
+          Add expense
+        </button>
       </form>
     </>
   );

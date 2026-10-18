@@ -738,7 +738,7 @@ Allow users to modify an existing expense.
 
 ## Edit UI
 
-- [ ] Add an edit button
+- [x] Add an edit button
 - [ ] Decide whether to reuse `ExpenseForm`
 - [ ] Load an existing expense into the form
 - [ ] Distinguish create mode from edit mode

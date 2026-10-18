@@ -10,9 +10,14 @@ import { totalCalculator } from "../utils/totalCalculator";
 interface ExpenseListProps {
   expenses: Expense[];
   onDelete: (e: number) => void;
+  isEditing: (expense: Expense) => void;
 }
 
-export const ExpenseList = ({ expenses, onDelete }: ExpenseListProps) => {
+export const ExpenseList = ({
+  expenses,
+  onDelete,
+  isEditing,
+}: ExpenseListProps) => {
   const [selectedCategory, setSelectedCategory] = useState<
     ExpenseCategory | "all"
   >("all");
@@ -52,6 +57,7 @@ export const ExpenseList = ({ expenses, onDelete }: ExpenseListProps) => {
               return (
                 <ExpenseItem
                   onDelete={onDelete}
+                  onEdit={isEditing}
                   id={expense.id}
                   key={expense.id}
                   amount={expense.amount}

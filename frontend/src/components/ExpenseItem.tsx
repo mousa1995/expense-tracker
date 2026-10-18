@@ -1,3 +1,4 @@
+import type { Expense } from "../types/Expense";
 import type { ExpenseCategory } from "../types/ExpenseCategory";
 
 interface ExpenseItemProps {
@@ -5,6 +6,7 @@ interface ExpenseItemProps {
   amount: number;
   category: ExpenseCategory;
   onDelete: (e: number) => void;
+  onEdit: (expense: Expense) => void;
   id: number;
 }
 
@@ -20,6 +22,18 @@ export const ExpenseItem = (props: ExpenseItemProps) => {
           style={{ color: "red" }}
         >
           Delete
+        </button>
+        <button
+          onClick={() =>
+            props.onEdit({
+              id: props.id,
+              person: props.person,
+              category: props.category,
+              amount: props.amount,
+            })
+          }
+        >
+          Edit
         </button>
       </li>
     </>

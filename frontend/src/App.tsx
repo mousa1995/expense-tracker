@@ -16,6 +16,11 @@ function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<null | string>(null);
+  const [isEditing, setIsEditing] = useState<Expense | null>(null);
+
+  const startEdit = (expense: Expense) => {
+    setIsEditing(expense);
+  };
 
   const expenseMaker = async (formData: {
     person: string;
@@ -103,7 +108,7 @@ function App() {
         <h1
           onClick={() => {
             // test
-            console.log("test");
+            console.log(isEditing);
           }}
         >
           Expense Tracker
@@ -113,7 +118,17 @@ function App() {
       <main>
         <section>
           <h2>Expenses</h2>
-          <ExpenseList onDelete={deleteHandler} expenses={expenses} />
+          <ExpenseList
+            onDelete={deleteHandler}
+            expenses={expenses}
+            isEditing={startEdit}
+          />
+          {isEditing && (
+            <div>
+              <p>Editing: {isEditing.person}</p>
+              <button onClick={() => setIsEditing(null)}>Cancel</button>
+            </div>
+          )}
           <ExpenseForm
             onSubmit={(e: {
               person: string;

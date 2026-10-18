@@ -686,37 +686,37 @@ Make the backend and frontend work together.
 
 ## Creating Expenses
 
-- [ ] Submit form data to the API
-- [ ] Wait for API success
-- [ ] Add returned expense to the UI or refetch the list
-- [ ] Handle validation errors from Laravel
-- [ ] Handle network/server errors
-- [ ] Prevent duplicate submissions
+- [x] Submit form data to the API
+- [x] Wait for API success
+- [x] Add returned expense to the UI or refetch the list
+- [x] Handle validation errors from Laravel
+- [x] Handle network/server errors
+- [s] Prevent duplicate submissions
 
 ## Deleting Expenses
 
-- [ ] Send delete request
-- [ ] Wait for API success
-- [ ] Update the UI
-- [ ] Handle delete failures
-- [ ] Prevent inconsistent frontend state
+- [x] Send delete request
+- [x] Wait for API success
+- [x] Update the UI
+- [x] Handle delete failures
+- [x] Prevent inconsistent frontend state
 
 ## Remove Local Storage as Source of Truth
 
-- [ ] Stop using localStorage as the primary data source
-- [ ] Confirm SQL is now the source of truth
-- [ ] Remove obsolete persistence logic
-- [ ] Keep only logic that still has a clear purpose
+- [x] Stop using localStorage as the primary data source
+- [x] Confirm SQL is now the source of truth
+- [x] Remove obsolete persistence logic
+- [x] Keep only logic that still has a clear purpose
 
 ## Verification
 
-- [ ] Load data from SQL through Laravel
-- [ ] Create an expense from React
-- [ ] Confirm it appears in SQL
-- [ ] Delete an expense from React
-- [ ] Confirm it is deleted from SQL
-- [ ] Refresh the browser and confirm data persists
-- [ ] Test API failure states
+- [x] Load data from SQL through Laravel
+- [x] Create an expense from React
+- [x] Confirm it appears in SQL
+- [x] Delete an expense from React
+- [x] Confirm it is deleted from SQL
+- [x] Refresh the browser and confirm data persists
+- [x] Test API failure states
 
 ## Git Commit
 
@@ -726,7 +726,7 @@ git commit -m "feat: connect frontend to Laravel API"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

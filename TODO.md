@@ -682,7 +682,7 @@ Make the backend and frontend work together.
 - [x] Make a isLoading component
 - [x] Display a loading state
 - [x] Handle a failed GET request
-- [ ] Display an error message when appropriate
+- [x] Display an error message when appropriate
 
 ## Creating Expenses
 

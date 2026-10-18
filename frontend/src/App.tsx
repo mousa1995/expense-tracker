@@ -28,7 +28,11 @@ function App() {
       if (formData.category === "") {
         formData.category = "other";
       }
-      if (formData.amount !== "" && formData.person !== "") {
+      if (
+        formData.amount !== "" &&
+        formData.person !== "" &&
+        +formData.amount > 0
+      ) {
         //1. insert data to db
         await createExpense(formData);
 
@@ -37,6 +41,8 @@ function App() {
 
         //3. set new expenses to state
         setExpenses(expenses.data);
+      } else {
+        throw new Error("please make sure person and amount are valid");
       }
     } catch (e) {
       if (e instanceof Error) {

@@ -22,10 +22,7 @@ export const ExpenseForm = ({ onSubmit }: ExpenseFormProps) => {
 
   const submitHandler = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (Number(form.amount) <= 0) {
-      console.error("amount is zero or negative");
-      return;
-    }
+
     onSubmit(form);
     if (form.amount !== "" && form.person !== "") {
       setForm({ person: "", amount: "", category: "" });

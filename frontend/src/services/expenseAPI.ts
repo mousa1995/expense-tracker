@@ -9,7 +9,7 @@ export const getExpenses = async () => {
       throw new Error("expenses did not fetch correctly.");
     }
     // if code reaches here the response is ok!
-    return response.json();
+    return await response.json();
   } catch (e) {
     throw e;
   }
@@ -36,10 +36,15 @@ export const createExpense = async ({
     });
 
     if (!response.ok) {
-      throw new Error("post from createExpense failed !");
+      if (response.status === 422) {
+        const data = await response.json();
+        throw new Error(JSON.stringify(data));
+      } else {
+        throw new Error("post from createExpense failed !");
+      }
     }
 
-    return response.json();
+    return await response.json();
   } catch (e) {
     throw e;
   }

@@ -11,7 +11,7 @@ export const getExpenses = async () => {
     // if code reaches here the response is ok!
     return response.json();
   } catch (e) {
-    console.error(e);
+    throw e;
   }
 };
 
@@ -41,7 +41,7 @@ export const createExpense = async ({
 
     return response.json();
   } catch (e) {
-    console.error(e);
+    throw e;
   }
 };
 
@@ -58,6 +58,6 @@ export const deleteExpense = async (id: number) => {
       throw new Error(`deletion of expense with id:${id} failed.`);
     }
   } catch (e) {
-    throw new Error(`${e}`);
+    throw e;
   }
 };

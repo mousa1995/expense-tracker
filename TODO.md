@@ -681,7 +681,7 @@ Make the backend and frontend work together.
 - [x] Store API data in frontend state
 - [x] Make a isLoading component
 - [x] Display a loading state
-- [ ] Handle a failed GET request
+- [x] Handle a failed GET request
 - [ ] Display an error message when appropriate
 
 ## Creating Expenses

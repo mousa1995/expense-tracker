@@ -15,12 +15,14 @@ import {
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<null | string>(null);
 
   const expenseMaker = async (formData: {
     person: string;
     amount: string;
     category: ExpenseCategory | "";
   }) => {
+    setError(null);
     setIsLoading(true);
     try {
       if (formData.category === "") {
@@ -37,20 +39,31 @@ function App() {
         setExpenses(expenses.data);
       }
     } catch (e) {
-      throw new Error(`${e}`);
+      if (e instanceof Error) {
+        console.error(e);
+        setError(e.message);
+      } else {
+        setError("unknown error");
+      }
     } finally {
       setIsLoading(false);
     }
   };
 
   const deleteHandler = async (id: number) => {
+    setError(null);
     setIsLoading(true);
     try {
       await deleteExpense(id);
       const expenses = await getExpenses();
       setExpenses(expenses.data);
     } catch (e) {
-      throw new Error(`${e}`);
+      if (e instanceof Error) {
+        console.error(e);
+        setError(e.message);
+      } else {
+        setError("unknown error");
+      }
     } finally {
       setIsLoading(false);
     }
@@ -59,12 +72,18 @@ function App() {
   useEffect(() => {
     // 1. get expenses from db and set all expenses inside state
     const loadExpenses = async () => {
+      setError(null);
       try {
         setIsLoading(true);
         const expenses = await getExpenses();
         setExpenses(expenses.data);
       } catch (e) {
-        throw new Error(`${e}`);
+        if (e instanceof Error) {
+          console.error(e);
+          setError(e.message);
+        } else {
+          setError("unknown error");
+        }
       } finally {
         setIsLoading(false);
       }
@@ -83,6 +102,7 @@ function App() {
         >
           Expense Tracker
         </h1>
+        {error && <h3>{error}</h3>}
       </header>
       <main>
         <section>

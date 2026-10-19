@@ -100,7 +100,7 @@ export const ExpenseForm = ({
           </select>
         </label>
         <button type="submit" disabled={isLoading}>
-          Add expense
+          {editingExpense ? "Submit Edit" : "Add expense"}
         </button>
       </form>
     </>

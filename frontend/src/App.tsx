@@ -10,6 +10,7 @@ import {
   createExpense,
   deleteExpense,
   getExpenses,
+  updateExpense,
 } from "./services/expenseAPI";
 
 function App() {
@@ -38,8 +39,14 @@ function App() {
         formData.person !== "" &&
         +formData.amount > 0
       ) {
-        //1. insert data to db
-        await createExpense(formData);
+        if (isEditing === null) {
+          //1. insert data to db
+          await createExpense(formData);
+        } else {
+          //1.1 if we have isEditing we are editing not creating !
+          await updateExpense({ id: isEditing.id, ...formData });
+          setIsEditing(null);
+        }
 
         //2. get all expenses from db
         const expenses = await getExpenses();

@@ -739,33 +739,32 @@ Allow users to modify an existing expense.
 ## Edit UI
 
 - [x] Add an edit button
-- [ ] Decide whether to reuse `ExpenseForm`
-- [ ] Load an existing expense into the form
-- [ ] Distinguish create mode from edit mode
-- [ ] Change the form title/button text when editing
-- [ ] Populate all editable fields
+- [x] Decide whether to reuse `ExpenseForm`
+- [x] Load an existing expense into the form
+- [x] Distinguish create mode from edit mode
+- [x] Change the form title/button text when editing
+- [x] Populate all editable fields
 
 ## Edit Logic
 
-- [ ] Create an edit handler
-- [ ] Submit updated data
-- [ ] Send a `PUT` request
-- [ ] Update the database
-- [ ] Update frontend state after success
+- [x] Create an edit handler
+- [x] Submit updated data
+- [x] Send a `PUT` request
+- [x] Update the database
+- [x] Update frontend state after success
 - [ ] Handle validation errors
-- [ ] Handle API errors
-- [ ] Reset the form after successful editing
+- [x] Handle API errors
+- [x] Reset the form after successful editing
 
 ## Verification
 
-- [ ] Edit title
-- [ ] Edit amount
-- [ ] Edit category
-- [ ] Edit date
-- [ ] Verify database record changes
-- [ ] Refresh the page
-- [ ] Verify changes persist
-- [ ] Cancel or exit edit mode cleanly
+- [x] Edit title
+- [x] Edit amount
+- [x] Edit category
+- [x] Verify database record changes
+- [x] Refresh the page
+- [x] Verify changes persist
+- [x] Cancel or exit edit mode cleanly
 
 ## Git Commit
 
@@ -775,7 +774,7 @@ git commit -m "feat: add expense editing"
 git push
 ```
 
-- [ ] Create this commit
+- [x] Create this commit
 
 ---
 

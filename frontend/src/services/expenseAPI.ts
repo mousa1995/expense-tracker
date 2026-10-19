@@ -66,3 +66,36 @@ export const deleteExpense = async (id: number) => {
     throw e;
   }
 };
+
+// PUT PART
+
+export const updateExpense = async ({
+  person,
+  amount,
+  category,
+  id,
+}: {
+  person: string;
+  amount: string;
+  category: string;
+  id: number;
+}) => {
+  try {
+    const URL = `http://127.0.0.1:8000/api/expenses/${id}`;
+    const response = await fetch(URL, {
+      headers: { "Content-Type": "application/json" },
+      method: "PUT",
+      body: JSON.stringify({ person, amount, category }),
+    });
+    if (!response.ok) {
+      if (response.status === 422) {
+        const data = await response.json();
+        throw new Error(JSON.stringify(data));
+      } else {
+        throw new Error(`editing of expense with id:${id} failed`);
+      }
+    }
+  } catch (e) {
+    throw e;
+  }
+};

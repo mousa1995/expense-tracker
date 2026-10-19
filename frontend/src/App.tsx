@@ -112,14 +112,7 @@ function App() {
     <>
       {isLoading && <IsLoading />}
       <header>
-        <h1
-          onClick={() => {
-            // test
-            console.log(isEditing);
-          }}
-        >
-          Expense Tracker
-        </h1>
+        <h1>Expense Tracker</h1>
         {error && <h3>{error}</h3>}
       </header>
       <main>

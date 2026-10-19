@@ -91,6 +91,8 @@ export const updateExpense = async ({
       if (response.status === 422) {
         const data = await response.json();
         throw new Error(JSON.stringify(data));
+      } else if (response.status === 404) {
+        throw new Error("this expense no longer exists!");
       } else {
         throw new Error(`editing of expense with id:${id} failed`);
       }

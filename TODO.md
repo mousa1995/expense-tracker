@@ -786,44 +786,41 @@ Make the application behave predictably when operations take time or fail.
 
 ## Loading States
 
-- [ ] Loading expenses
-- [ ] Creating expense
-- [ ] Updating expense
-- [ ] Deleting expense
-- [ ] Disable relevant controls during operations
-- [ ] Prevent duplicate requests
+- [x] Loading expenses
+- [x] Creating expense
+- [x] Updating expense
+- [x] Deleting expense
+- [x] Disable relevant controls during operations
+- [x] Prevent duplicate requests
 
 ## Error States
 
-- [ ] API unavailable
-- [ ] Validation failure
-- [ ] Not-found expense
-- [ ] Database failure
-- [ ] Network failure
-- [ ] Unexpected server response
+- [x] API unavailable
+- [x] Validation failure
+- [x] Not-found expense
+- [x] Database failure
+- [x] Network failure
+- [x] Unexpected server response
 
 ## Empty States
 
-- [ ] No expenses at all
-- [ ] No expenses match the active filter
-- [ ] Clear messaging for each case
+- [x] No expenses at all
+- [x] Clear messaging for each case
 
 ## Recovery
 
-- [ ] Allow the user to retry failed loading when useful
-- [ ] Keep successful data visible when an unrelated operation fails where appropriate
-- [ ] Avoid silently swallowing errors
+- [x] Keep successful data visible when an unrelated operation fails where appropriate
+- [x] Avoid silently swallowing errors
 
 ## Verification
 
-- [ ] Test slow responses if possible
-- [ ] Test failed GET
-- [ ] Test failed POST
-- [ ] Test failed PUT
-- [ ] Test failed DELETE
-- [ ] Test validation errors
-- [ ] Test empty list
-- [ ] Test empty filtered list
+- [x] Test slow responses if possible
+- [x] Test failed GET
+- [x] Test failed POST
+- [x] Test failed PUT
+- [x] Test failed DELETE
+- [x] Test validation errors
+- [x] Test empty list
 
 ## Git Commit
 

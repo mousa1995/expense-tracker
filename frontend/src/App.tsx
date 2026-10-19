@@ -136,6 +136,7 @@ function App() {
               category: ExpenseCategory | "";
             }) => expenseMaker(e)}
             isLoading={isLoading}
+            editingExpense={isEditing}
           />
         </section>
         <section>

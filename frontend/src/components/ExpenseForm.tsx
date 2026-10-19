@@ -4,6 +4,7 @@ import {
   expenseCategories,
   type ExpenseCategory,
 } from "../types/ExpenseCategory";
+import type { Expense } from "../types/Expense";
 
 interface ExpenseFormProps {
   onSubmit: (e: {
@@ -12,14 +13,23 @@ interface ExpenseFormProps {
     category: ExpenseCategory | "";
   }) => void;
   isLoading: boolean;
+  editingExpense: null | Expense;
 }
 
-export const ExpenseForm = ({ onSubmit, isLoading }: ExpenseFormProps) => {
+export const ExpenseForm = ({
+  onSubmit,
+  isLoading,
+  editingExpense,
+}: ExpenseFormProps) => {
   const [form, setForm] = useState<{
     person: string;
     amount: string;
     category: ExpenseCategory | "";
-  }>({ person: "", amount: "", category: "" });
+  }>({
+    person: editingExpense?.person ?? "",
+    amount: editingExpense ? String(editingExpense.amount) : "",
+    category: editingExpense?.category ?? "",
+  });
 
   const submitHandler = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,18 +41,20 @@ export const ExpenseForm = ({ onSubmit, isLoading }: ExpenseFormProps) => {
   };
 
   const categoryHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (e.target.value === "") {
-      setForm({ ...form, category: "other" });
-      return;
+    if (!editingExpense) {
+      if (e.target.value === "") {
+        setForm({ ...form, category: "other" });
+        return;
+      }
+      if (
+        e.target.value !== "" &&
+        expenseCategories.includes(e.target.value as ExpenseCategory)
+      ) {
+        setForm({ ...form, category: e.target.value as ExpenseCategory });
+        return;
+      }
+      throw new Error("Someting is wrong in categoryHandler");
     }
-    if (
-      e.target.value !== "" &&
-      expenseCategories.includes(e.target.value as ExpenseCategory)
-    ) {
-      setForm({ ...form, category: e.target.value as ExpenseCategory });
-      return;
-    }
-    throw new Error("Someting is wrong in categoryHandler");
   };
 
   return (
@@ -51,11 +63,13 @@ export const ExpenseForm = ({ onSubmit, isLoading }: ExpenseFormProps) => {
         <label>
           Person
           <input
-            value={form.person}
+            value={editingExpense ? editingExpense.person : form.person}
             name="person"
             type="text"
             onChange={(e) => {
-              setForm({ ...form, person: e.target.value });
+              if (!editingExpense) {
+                setForm({ ...form, person: e.target.value });
+              }
             }}
           />
           {form.person === "" ? <span>Please fill person's name </span> : ""}
@@ -63,11 +77,13 @@ export const ExpenseForm = ({ onSubmit, isLoading }: ExpenseFormProps) => {
         <label>
           amount
           <input
-            value={form.amount}
+            value={editingExpense ? editingExpense.amount : form.amount}
             name="amount"
             type="number"
             onChange={(e) => {
-              setForm({ ...form, amount: e.target.value });
+              if (!editingExpense) {
+                setForm({ ...form, amount: e.target.value });
+              }
             }}
           />
           {form.amount === "" ? <span>Please fill amount spent </span> : ""}
@@ -77,7 +93,7 @@ export const ExpenseForm = ({ onSubmit, isLoading }: ExpenseFormProps) => {
           <select
             name="category"
             onChange={categoryHandler}
-            value={form.category}
+            value={editingExpense ? editingExpense.category : form.category}
           >
             <option value={""}></option>
             {expenseCategories.map((el) => {

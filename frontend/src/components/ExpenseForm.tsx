@@ -41,20 +41,18 @@ export const ExpenseForm = ({
   };
 
   const categoryHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (!editingExpense) {
-      if (e.target.value === "") {
-        setForm({ ...form, category: "other" });
-        return;
-      }
-      if (
-        e.target.value !== "" &&
-        expenseCategories.includes(e.target.value as ExpenseCategory)
-      ) {
-        setForm({ ...form, category: e.target.value as ExpenseCategory });
-        return;
-      }
-      throw new Error("Someting is wrong in categoryHandler");
+    if (e.target.value === "") {
+      setForm({ ...form, category: "other" });
+      return;
     }
+    if (
+      e.target.value !== "" &&
+      expenseCategories.includes(e.target.value as ExpenseCategory)
+    ) {
+      setForm({ ...form, category: e.target.value as ExpenseCategory });
+      return;
+    }
+    throw new Error("Someting is wrong in categoryHandler");
   };
 
   return (
@@ -63,13 +61,11 @@ export const ExpenseForm = ({
         <label>
           Person
           <input
-            value={editingExpense ? editingExpense.person : form.person}
+            value={form.person}
             name="person"
             type="text"
             onChange={(e) => {
-              if (!editingExpense) {
-                setForm({ ...form, person: e.target.value });
-              }
+              setForm({ ...form, person: e.target.value });
             }}
           />
           {form.person === "" ? <span>Please fill person's name </span> : ""}
@@ -77,13 +73,11 @@ export const ExpenseForm = ({
         <label>
           amount
           <input
-            value={editingExpense ? editingExpense.amount : form.amount}
+            value={form.amount}
             name="amount"
             type="number"
             onChange={(e) => {
-              if (!editingExpense) {
-                setForm({ ...form, amount: e.target.value });
-              }
+              setForm({ ...form, amount: e.target.value });
             }}
           />
           {form.amount === "" ? <span>Please fill amount spent </span> : ""}
@@ -93,7 +87,7 @@ export const ExpenseForm = ({
           <select
             name="category"
             onChange={categoryHandler}
-            value={editingExpense ? editingExpense.category : form.category}
+            value={form.category}
           >
             <option value={""}></option>
             {expenseCategories.map((el) => {

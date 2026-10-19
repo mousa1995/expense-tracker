@@ -130,6 +130,7 @@ function App() {
             </div>
           )}
           <ExpenseForm
+            key={isEditing ? isEditing.id : "new"}
             onSubmit={(e: {
               person: string;
               amount: string;

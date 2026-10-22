@@ -68,10 +68,14 @@ export const ExpenseForm = ({
               setForm({ ...form, person: e.target.value });
             }}
           />
-          {form.person === "" ? <span>Please fill person's name </span> : ""}
+          {form.person === "" ? (
+            <span role="alert">Name is required </span>
+          ) : (
+            ""
+          )}
         </label>
         <label className="field">
-          amount
+          Amount
           <input
             value={form.amount}
             name="amount"
@@ -80,10 +84,14 @@ export const ExpenseForm = ({
               setForm({ ...form, amount: e.target.value });
             }}
           />
-          {form.amount === "" ? <span>Please fill amount spent </span> : ""}
+          {form.amount === "" ? (
+            <span role="alert">Amount is required</span>
+          ) : (
+            ""
+          )}
         </label>
         <label className="field">
-          category
+          Category
           <select
             name="category"
             onChange={categoryHandler}

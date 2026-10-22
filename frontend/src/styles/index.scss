@@ -54,10 +54,12 @@ h3 {
 }
 
 .field input,
-.field select {
+.field select,
+select[name="filterCategory"] {
   padding: $space-sm;
   font: inherit;
   border: 1px solid $border;
+  border-radius: 6px;
 }
 
 .field span {
@@ -65,20 +67,25 @@ h3 {
   color: $danger;
 }
 
-button[type="submit"] {
-  align-self: flex-start;
+button {
   padding: $space-sm $space-md;
   font: inherit;
   border: none;
   border-radius: 6px;
-  background: #2563eb;
-  color: #fff;
+  background: #e5e7eb;
+  color: $text;
   cursor: pointer;
 
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #fff;
 }
 
 .total-expense {

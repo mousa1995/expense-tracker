@@ -6,6 +6,7 @@ import {
   type ExpenseCategory,
 } from "../types/ExpenseCategory";
 import { totalCalculator } from "../utils/totalCalculator";
+import { formatMoney } from "../utils/formatMoney";
 
 interface ExpenseListProps {
   expenses: Expense[];
@@ -74,10 +75,10 @@ export const ExpenseList = ({
       {filteredExpenses.length === 0 ? (
         ""
       ) : (
-        <div className="total-expense">
-          Total expense from this category : {totalCalculator(filteredExpenses)}
-          $
-        </div>
+        <p className="total-expense">
+          Total expense from this category :{" "}
+          {formatMoney(totalCalculator(filteredExpenses))}
+        </p>
       )}
     </>
   );

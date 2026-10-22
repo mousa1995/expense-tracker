@@ -57,8 +57,8 @@ export const ExpenseForm = ({
 
   return (
     <>
-      <form onSubmit={submitHandler}>
-        <label>
+      <form onSubmit={submitHandler} className="expense-form">
+        <label className="field">
           Person
           <input
             value={form.person}
@@ -70,7 +70,7 @@ export const ExpenseForm = ({
           />
           {form.person === "" ? <span>Please fill person's name </span> : ""}
         </label>
-        <label>
+        <label className="field">
           amount
           <input
             value={form.amount}
@@ -82,7 +82,7 @@ export const ExpenseForm = ({
           />
           {form.amount === "" ? <span>Please fill amount spent </span> : ""}
         </label>
-        <label>
+        <label className="field">
           category
           <select
             name="category"

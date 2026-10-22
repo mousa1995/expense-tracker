@@ -17,12 +17,7 @@ export const ExpenseItem = (props: ExpenseItemProps) => {
         <p>Name : {props.person}</p>
         <p>Expense: ${props.amount}</p>
         <p>Category: {props.category}</p>
-        <button
-          onClick={() => props.onDelete(props.id)}
-          style={{ color: "red" }}
-        >
-          Delete
-        </button>
+        <button onClick={() => props.onDelete(props.id)}>Delete</button>
         <button
           onClick={() =>
             props.onEdit({

@@ -842,9 +842,9 @@ Make the application clean, understandable, and presentable.
 
 ## Layout
 
-- [ ] Improve page spacing
-- [ ] Improve section hierarchy
-- [ ] Improve form layout
+- [x] Improve page spacing
+- [x] Improve section hierarchy
+- [x] Improve form layout
 - [ ] Improve expense list layout
 - [ ] Improve total display
 - [ ] Improve filter layout
@@ -861,7 +861,7 @@ Make the application clean, understandable, and presentable.
 
 ## Accessibility
 
-- [ ] Associate labels with form controls
+- [x] Associate labels with form controls
 - [ ] Use semantic HTML
 - [ ] Ensure buttons have clear labels
 - [ ] Check keyboard usability

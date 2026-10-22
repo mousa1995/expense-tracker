@@ -74,7 +74,7 @@ export const ExpenseList = ({
       {filteredExpenses.length === 0 ? (
         ""
       ) : (
-        <div>
+        <div className="total-expense">
           Total expense from this category : {totalCalculator(filteredExpenses)}
           $
         </div>

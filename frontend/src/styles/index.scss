@@ -1,0 +1,87 @@
+@use "./variables" as *;
+
+header {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+body {
+  padding: $space-lg;
+  font-family: system-ui, sans-serif;
+  background: $bg;
+  color: $text;
+}
+
+h1 {
+  margin: 0 0 $space-lg;
+  font-size: 28px;
+}
+
+h2 {
+  margin: 0 0 $space-md;
+  font-size: 20px;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: $space-lg;
+  padding: $space-md;
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: 8px;
+}
+
+h3 {
+  margin: 0 0 $space-md;
+  font-size: 16px;
+  color: $danger;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.field input,
+.field select {
+  padding: $space-sm;
+  font: inherit;
+  border: 1px solid $border;
+}
+
+.field span {
+  font-size: 14px;
+  color: $danger;
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  padding: $space-sm $space-md;
+  font: inherit;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.total-expense {
+  padding: $space-md;
+  margin-bottom: $space-lg;
+}

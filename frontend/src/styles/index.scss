@@ -83,5 +83,30 @@ button[type="submit"] {
 
 .total-expense {
   padding: $space-md;
-  margin-bottom: $space-lg;
+}
+
+ul {
+  margin: 0 0 $space-md;
+  padding: 0;
+  list-style: none;
+}
+
+.expense-item {
+  margin-bottom: $space-sm;
+  padding: $space-md;
+  border: 1px solid $border;
+  border-radius: 6px;
+
+  p {
+    margin: 0 0 $space-sm;
+  }
+}
+
+.expense-actions {
+  display: flex;
+  gap: $space-sm;
+}
+
+select[name="filterCategory"] {
+  margin-bottom: $space-md;
 }

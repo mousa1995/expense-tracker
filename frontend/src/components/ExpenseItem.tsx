@@ -13,23 +13,25 @@ interface ExpenseItemProps {
 export const ExpenseItem = (props: ExpenseItemProps) => {
   return (
     <>
-      <li>
+      <li className="expense-item">
         <p>Name : {props.person}</p>
         <p>Expense: ${props.amount}</p>
         <p>Category: {props.category}</p>
-        <button onClick={() => props.onDelete(props.id)}>Delete</button>
-        <button
-          onClick={() =>
-            props.onEdit({
-              id: props.id,
-              person: props.person,
-              category: props.category,
-              amount: props.amount,
-            })
-          }
-        >
-          Edit
-        </button>
+        <div className="expense-actions">
+          <button onClick={() => props.onDelete(props.id)}>Delete</button>
+          <button
+            onClick={() =>
+              props.onEdit({
+                id: props.id,
+                person: props.person,
+                category: props.category,
+                amount: props.amount,
+              })
+            }
+          >
+            Edit
+          </button>
+        </div>
       </li>
     </>
   );

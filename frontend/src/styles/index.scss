@@ -82,7 +82,9 @@ button[type="submit"] {
 }
 
 .total-expense {
-  padding: $space-md;
+  padding: 0;
+  margin-bottom: $space-lg;
+  font-weight: 600;
 }
 
 ul {

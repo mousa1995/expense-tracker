@@ -846,7 +846,7 @@ Make the application clean, understandable, and presentable.
 - [x] Improve section hierarchy
 - [x] Improve form layout
 - [x] Improve expense list layout
-- [ ] Improve total display
+- [x] Improve total display
 - [ ] Improve filter layout
 - [ ] Ensure the interface is visually coherent
 

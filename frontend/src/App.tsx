@@ -11,6 +11,7 @@ import {
   getExpenses,
   updateExpense,
 } from "./services/expenseAPI";
+import { formatMoney } from "./utils/formatMoney";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -141,15 +142,16 @@ function App() {
         </section>
         <section>
           <h2>Total</h2>
-          <p>
+          <div>
             {totalCalculator(expenses) > 0 ? (
-              <span>
-                Total expense from all expenses : {totalCalculator(expenses)}$
-              </span>
+              <p className="total-expense">
+                Total expense from all expenses :{" "}
+                {formatMoney(totalCalculator(expenses))}
+              </p>
             ) : (
               "No Expenses yet."
             )}
-          </p>
+          </div>
         </section>
       </main>
     </>

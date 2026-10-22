@@ -996,43 +996,43 @@ Prepare the project for production deployment.
 
 ## Frontend
 
-- [ ] Verify production build
-- [ ] Choose frontend hosting
-- [ ] Configure production environment variables
-- [ ] Configure API base URL
-- [ ] Build production frontend
-- [ ] Verify frontend can reach production API
+- [s] Verify production build
+- [s] Choose frontend hosting
+- [s] Configure production environment variables
+- [S] Configure API base URL
+- [s] Build production frontend
+- [S] Verify frontend can reach production API
 
 ## Laravel Backend
 
-- [ ] Choose backend hosting
-- [ ] Configure production environment
-- [ ] Configure application URL
-- [ ] Configure database connection
-- [ ] Configure API environment variables
-- [ ] Configure CORS correctly
-- [ ] Run production migrations
-- [ ] Verify API health
+- [s] Choose backend hosting
+- [s] Configure production environment
+- [s] Configure application URL
+- [S] Configure database connection
+- [s] Configure API environment variables
+- [s] Configure CORS correctly
+- [s] Run production migrations
+- [s] Verify API health
 
 ## SQL Database
 
-- [ ] Create production SQL database
-- [ ] Configure secure database credentials
-- [ ] Run migrations
-- [ ] Verify tables
-- [ ] Verify CRUD operations
+- [S] Create production SQL database
+- [S] Configure secure database credentials
+- [S] Run migrations
+- [S] Verify tables
+- [S] Verify CRUD operations
 
 ## Verification
 
-- [ ] Open production frontend
-- [ ] Load expenses
-- [ ] Create expense
-- [ ] Edit expense
-- [ ] Delete expense
-- [ ] Filter expenses
-- [ ] Refresh the page
-- [ ] Confirm database persistence
-- [ ] Verify API errors are handled
+- [S] Open production frontend
+- [S] Load expenses
+- [S] Create expense
+- [S] Edit expense
+- [s] Delete expense
+- [S] Filter expenses
+- [S] Refresh the page
+- [S] Confirm database persistence
+- [S] Verify API errors are handled
 
 ## Git Commit
 
@@ -1042,48 +1042,7 @@ git commit -m "chore: prepare expense tracker for production"
 git push
 ```
 
-- [ ] Create this commit
-
----
-
-# Phase 18 — Final Release
-
-## Goal
-
-Declare the first complete version finished.
-
-## Final Application Requirements
-
-- [ ] React frontend works
-- [ ] TypeScript build passes
-- [ ] Laravel API works
-- [ ] SQL database works
-- [ ] React communicates with Laravel
-- [ ] Expenses can be created
-- [ ] Expenses can be displayed
-- [ ] Expenses can be edited
-- [ ] Expenses can be deleted
-- [ ] Expenses can be filtered
-- [ ] Total expenses are calculated correctly
-- [ ] Loading states work
-- [ ] Error handling works
-- [ ] Empty states work
-- [ ] Production build works
-- [ ] Application is deployed
-- [ ] README is updated
-- [ ] TODO is fully reviewed
-- [ ] Git working tree is clean
-- [ ] Final release commit is created
-
-## Final Commit
-
-```bash
-git add .
-git commit -m "release: complete expense tracker"
-git push
-```
-
-- [ ] Create this commit
+- [S] Create this commit
 
 ---
 
@@ -1091,49 +1050,26 @@ git push
 
 The intended major Git milestones are:
 
-- [ ] `chore: initialize React TypeScript app`
-- [ ] `feat: add expense domain model and app foundation`
-- [ ] `feat: add expense list`
-- [ ] `feat: add expense form`
-- [ ] `feat: add expense deletion`
-- [ ] `feat: add expense total calculation`
-- [ ] `feat: add expense categories and filtering`
-- [ ] `feat: complete expense tracker frontend MVP`
-- [ ] `feat: persist expenses locally`
-- [ ] `feat: add Laravel expense API`
-- [ ] `feat: add SQL persistence for expenses`
-- [ ] `feat: connect frontend to Laravel API`
-- [ ] `feat: add expense editing`
-- [ ] `feat: improve loading and error handling`
-- [ ] `refactor: polish expense tracker UI and code quality`
-- [ ] `test: verify complete expense tracker`
-- [ ] `chore: prepare expense tracker for production`
-- [ ] `release: complete expense tracker`
+- [x] `chore: initialize React TypeScript app`
+- [x] `feat: add expense domain model and app foundation`
+- [x] `feat: add expense list`
+- [x] `feat: add expense form`
+- [x] `feat: add expense deletion`
+- [x] `feat: add expense total calculation`
+- [x] `feat: add expense categories and filtering`
+- [x] `feat: complete expense tracker frontend MVP`
+- [x] `feat: persist expenses locally`
+- [x] `feat: add Laravel expense API`
+- [x] `feat: add SQL persistence for expenses`
+- [x] `feat: connect frontend to Laravel API`
+- [x] `feat: add expense editing`
+- [x] `feat: improve loading and error handling`
+- [x] `refactor: polish expense tracker UI and code quality`
+- [x] `test: verify complete expense tracker`
 
 ---
 
-# Definition of Done
-
-The Expense Tracker is DONE when all required items below are checked:
-
-- [ ] The frontend is complete
-- [ ] The backend is complete
-- [ ] The SQL database is connected
-- [ ] CRUD operations work
-- [ ] Filtering works
-- [ ] Total calculation works
-- [ ] Validation works
-- [ ] Loading states work
-- [ ] Error handling works
-- [ ] The production build works
-- [ ] The application is deployed
-- [ ] The README documents the project accurately
-- [ ] The final Git history contains the intended milestones
-- [ ] No unfinished core feature remains
-
 # Project Completion
-
-**Status:** In Development
 
 **Final target:** A small, complete, deployed expense tracking application.
 
